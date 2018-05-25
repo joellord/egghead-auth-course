@@ -1,0 +1,109 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+<div class="container container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Secure your SPA</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active" data-route="#">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+            </ul>
+            <form class="form-inline">
+                <button class="btn btn-outline-success my-2 my-sm-0" data-toggle="modal" data-target="#loginModal" type="button" id="loginModalBtn">Login</button>&nbsp;
+                <button class="btn btn-outline-danger d-none" id="logoutBtn">Logout</button>
+            </form>
+        </div>
+    </nav>
+
+    <span id="mainPage">
+
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10 text-center">
+                <p>Welcome to the headline generator application.  Click on the buttons to get a headline</p>
+            </div>
+            <div class="col-1"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 text-center">
+                <button class="btn btn-lg btn-primary" id="headline">Public</button>&nbsp;
+                <button class="btn btn-lg btn-secondary" id="secret">Private</button>
+            </div>
+        </div>
+
+        <div class="row">&nbsp;</div>
+
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <div class="alert alert-dark" style="overflow-wrap: break-word">
+                    Test the API
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-4 text-center">
+                <img src="http://http.cat/200" id="httpcat" width="350px"/>
+            </div>
+        </div>
+    </span>
+
+    <span id="secretPage" class="d-none">
+        This is a secret area!
+    </span>
+
+    <span id="unauthorizedPage" class="d-none">
+        You are not authorized to see this page.
+    </span>
+</div>
+
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" id="username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="loginBtn">Login</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="./ui-update.js"></script>
+<script src="./index.js"></script>
+</body>
+</html>
