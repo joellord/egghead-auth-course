@@ -10,7 +10,9 @@ app.use(bodyParser.json());
 app.use(cors());
 
 const jwtCheck = expressjwt({
-    secret: "mysupersecretkey"
+  secret: 't2ABNgm7aB8YrMrnsutSB0bPNtLZbC7P',
+  audience: 'secure-spa-auth0',
+  issuer: "https://joel-1.auth0.com/"
 });
 
 app.get("/resource", (req, res) => {

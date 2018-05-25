@@ -1,7 +1,7 @@
 let UIUpdate = {};
 
 UIUpdate.loggedIn = function(token) {
-  UIUpdate.alertBox(`Just logged in<br>Token:<br>${localStorage.getItem("access_token")}`);
+  UIUpdate.alertBox(`Just logged in<br>Token:<br>${ACCESS_TOKEN}`);
   loginModalBtn.classList.add("d-none");
   logoutBtn.classList.remove("d-none");
 };
